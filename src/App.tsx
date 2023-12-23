@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+
+
+function LikeButton() {
+  const [count, setCoount] = useState(999)
+  const handleClick = () => {
+    setCoount(count + 1)
+  };
+
+  // useEffect (() => {
+  //   alert("いいねが押されました")
+  // },[count])
+
+  return (
+    <span className="likeButton" onClick={handleClick}>
+      ♥ {count}
+    </span>
+  )
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className='App-header'>
+        　Hi There👋👋👋
       </header>
+      <body className='App-body'>
+        <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo"/>
+      </body>
     </div>
   );
 }
+
 
 export default App;
