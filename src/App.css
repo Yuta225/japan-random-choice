@@ -62,3 +62,24 @@
 .header {
   height: 3rem; 
 }
+
+
+.box {
+	animation: flash 1s linear infinite;
+}
+
+@keyframes flash {
+	0%,
+	50%,
+	100% {
+		opacity: 0;
+	}
+
+	35% {
+		opacity: 1;
+	}
+
+	65% {
+		opacity: 1;
+	}
+}

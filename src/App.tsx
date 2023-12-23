@@ -8,10 +8,6 @@ function LikeButton() {
     setCoount(count + 1)
   };
 
-  // useEffect (() => {
-  //   alert("いいねが押されました")
-  // },[count])
-
   return (
     <span className="likeButton" onClick={handleClick}>
       ♥ {count}
@@ -26,7 +22,9 @@ function App() {
         　Hi There👋👋👋
       </header>
       <body className='App-body'>
-        <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo"/>
+        <div className='box'>
+          <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="Logo"/>
+        </div>
       </body>
     </div>
   );
